@@ -400,8 +400,11 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-# 第三方库（如果本地包含）
-Dependencies/      # 第三方依赖目录（如 GLFW、GLM）
+shader_cache/
+precomputed_maps/
+screenshots/
+debug_output/
+[Dd]ependencies/      # 第三方依赖目录（如 GLFW、GLM）
 external/          # 外部库目录
 vendor/            # 供应商库目录
 lib/               # 编译的库文件（如果不是构建输出）
