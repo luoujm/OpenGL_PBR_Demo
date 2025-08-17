@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="scr">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ShaderSourceCode">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>scr</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>scr</Filter>
+    </ClCompile>
+    <ClCompile Include="Proccess_image.cpp">
+      <Filter>scr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>scr</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>scr</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>scr</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>scr</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>scr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="shader\PBRFRAG.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\PBRVER.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\equirectangular_to_cubemapFRAG.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\equirectangular_to_cubemapVER.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\irradiance_convolutionFRAG.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\irradiance_convolutionVER.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\skyboxFRAG.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\skyboxVER.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\equirectangular_to_cubemapGEO.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\irradiance_convolutionGEO.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\BRDFVER.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\BRDFFRAG.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\prefilterVER.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\prefilterGEO.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+    <Text Include="shader\prefilterFRAG.txt">
+      <Filter>ShaderSourceCode</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

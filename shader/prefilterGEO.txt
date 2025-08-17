@@ -1,0 +1,21 @@
+#version 330 core
+layout (triangles) in;
+layout (triangle_strip, max_vertices=18) out;
+
+uniform mat4 cubeMatrices[6];
+out vec4 WorldPos;
+
+void main()
+{
+    for(int face = 0; face < 6; ++face)
+    {
+        gl_Layer = face; // built-in variable that specifies to which face we render.指定层数后顶点数据将渲染到指定的面上
+        for(int i = 0; i < 3; ++i) // for each triangle's vertices
+        {
+            WorldPos = gl_in[i].gl_Position;
+            gl_Position = cubeMatrices[face] * WorldPos;
+            EmitVertex();
+        }    
+        EndPrimitive();
+    }
+}
