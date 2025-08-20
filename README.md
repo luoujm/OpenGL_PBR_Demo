@@ -41,7 +41,7 @@
 2. 环境贴图预滤波（Environment Map Prefiltering）:预计算不同粗糙度在BRDF特性下的光照效果(环境贴图按BRDF的镜面项或漫反射项进行卷积)，生成一组简化贴图，实时渲染只需采样贴图提高了效率
 3. 重要性采样：根据BRDF或环境贴图的特性，优先采样那些对结果贡献大的方向，并减少采样次数，这样可以减少蒙特卡洛积分的方差，渲染结果更加平滑减少了噪声，比如采样概率密度函数和法线分布函数成正比(因为法线分布函数衡量了不同入射方向对反射方向的贡献程度),实际上就是按照某一概率密度函数生成对应的采样样本，以这些样本进行蒙特卡洛积分-有偏概率估计
 ## 双向反射分布函数（BRDF, Bidirectional Reflectance Distribution Function）
-- 双向反射分布函数（BRDF, Bidirectional Reflectance Distribution Function）:$`f_r=k_d f_{lambert} + k_s f_{cook−torrance}`$，对于给定出射（视线）方向，它指定每个方向的入射光([辐射强度](Radiant-Intensity))对出射光([辐射亮度](Radiance))的相对贡献，定义为出射辐射亮度与入射辐射强度的比值
+- 双向反射分布函数（BRDF, Bidirectional Reflectance Distribution Function）:$`f_r=k_d f_{lambert} + k_s f_{cook−torrance}`$，对于给定出射（视线）方向，它指定每个方向的入射光([辐射强度](#Radiant-Intensity))对出射光([辐射亮度](#Radiance))的相对贡献，定义为出射辐射亮度与入射辐射强度的比值
 >这里渲染方程分为多重反弹次表面散射(漫反射项)和单次反弹表面反射(镜面反射项)
 ### 漫反射部分
 - Lambert BRDF(介电质的漫反射部分)： $`f_r(p,\omega_i,\omega_o) = \frac{\rho}{\pi}`$, 表示所有入射的辐射亮度(无论角度)经过该常数缩放后都会贡献到ωo反射的辐射亮度,$`\rho`$是表面的漫反射反照率
